@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleksi Karakter - QS. Al-Hujurat:13</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f5e9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(to bottom, rgba(248, 245, 233, 0.9), rgba(248, 245, 233, 0.9)), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c9a5' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5e3f 0%, #2c9c69 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #d4c9a5;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .verse-container {
+            background-color: #f1f0e5;
+            padding: 25px;
+            border-bottom: 2px solid #d4c9a5;
+            text-align: center;
+        }
+        
+        .verse-arabic {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #1a5e3f;
+            font-family: 'Traditional Arabic', serif;
+        }
+        
+        .verse-translation {
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .verse-reference {
+            font-weight: bold;
+            color: #1a5e3f;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .intro {
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #1a5e3f;
+            font-size: 1.1rem;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        textarea:focus {
+            border-color: #2c9c69;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(44, 156, 105, 0.2);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #1a5e3f 0%, #2c9c69 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            background-color: #f8f5e9;
+            border-top: 1px solid #e5e2d5;
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .verse-arabic {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Refleksi Karakter</h1>
+            <p>Bacalah QS. Al-Hujurat:13, lalu isi jurnal berikut:</p>
+        </header>
+        
+        <div class="verse-container">
+            <div class="verse-arabic">يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُمْ مِنْ ذَكَرٍ وَأُنْثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا ۚ إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ ۚ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ</div>
+            <div class="verse-translation">"Wahai manusia! Sungguh, Kami telah menciptakan kamu dari seorang laki-laki dan seorang perempuan, kemudian Kami jadikan kamu berbangsa-bangsa dan bersuku-suku agar kamu saling mengenal. Sesungguhnya yang paling mulia di antara kamu di sisi Allah ialah orang yang paling bertakwa. Sungguh, Allah Maha Mengetahui, Maha Teliti."</div>
+            <div class="verse-reference">QS. Al-Hujurat: 13</div>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p>Ayat ini mengajarkan tentang persamaan derajat manusia, pentingnya persaudaraan, dan tolok ukur kemuliaan di sisi Allah. Mari kita renungkan maknanya dan bagaimana kita dapat menerapkannya dalam kehidupan sehari-hari.</p>
+            </div>
+            
+            <form id="reflectionForm">
+                <div class="form-group">
+                    <label for="mainValue">Apa nilai utama dari ayat tersebut?</label>
+                    <textarea id="mainValue" required placeholder="Tuliskan refleksi Anda tentang nilai-nilai utama dalam ayat ini..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="application">Bagaimana kamu akan menerapkannya di sekolah?</label>
+                    <textarea id="application" required placeholder="Jelaskan bagaimana Anda akan menerapkan nilai-nilai tersebut dalam kehidupan sekolah sehari-hari..."></textarea>
+                </div>
+                
+                <button type="submit">Kirim Jurnal</button>
+            </form>
+        </div>
+        
+        <footer>
+            <p>© 2023 Refleksi Karakter - QS. Al-Hujurat:13</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('reflectionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const mainValue = document.getElementById('mainValue').value;
+            const application = document.getElementById('application').value;
+            
+            if (mainValue.trim() === '' || application.trim() === '') {
+                alert('Harap isi kedua bidang refleksi sebelum mengirim.');
+                return;
+            }
+            
+            // Simulasi pengiriman data
+            alert('Terima kasih! Jurnal refleksi Anda telah berhasil dikirim.');
+            
+            // Reset form
+            document.getElementById('reflectionForm').reset();
+        });
+    </script>
+</body>
+</html>
